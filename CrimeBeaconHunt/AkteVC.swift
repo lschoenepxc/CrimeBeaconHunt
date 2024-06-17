@@ -11,11 +11,8 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     // Table view with scrollable collection view inside to create a carousel. Inspired by: https://www.youtube.com/watch?v=9N4o98SQHGM
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
-        return table
-    }()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     private var viewModels: [CollectionTableViewCellViewModel] = []
     
@@ -55,20 +52,14 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
 
         // Do any additional setup after loading the view.
         
         // To-Do: Start: Selected Segment = Verdächtige
         viewModels = viewModelsSuspects
-        view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //tableView.rowHeight = 400
-        tableView.frame = CGRect(x: 38, y: 270, width: 300, height: 400)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,15 +96,12 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         case 0:
             viewModels = viewModelsSuspects
             tableView.reloadData()
-            print("Verdächtige")
         case 1:
             viewModels = viewModelsWeapons
             tableView.reloadData()
-            print("Tatwaffe")
         case 2:
             viewModels = viewModelsPlaces
             tableView.reloadData()
-            print("Tatort")
         default:
             print("Nothing new")
         }

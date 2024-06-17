@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F002536E2C20DAC500600559 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002536D2C20DAC500600559 /* Checkbox.swift */; };
+		F00253702C20DB2500600559 /* IndizienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002536F2C20DB2500600559 /* IndizienVC.swift */; };
+		F00253722C20DCE800600559 /* IndizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00253712C20DCE800600559 /* IndizTableViewCell.swift */; };
 		F0C0D18D2C1B542C00DD9EEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C0D18C2C1B542C00DD9EEF /* AppDelegate.swift */; };
 		F0C0D18F2C1B542C00DD9EEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C0D18E2C1B542C00DD9EEF /* SceneDelegate.swift */; };
 		F0C0D1912C1B542C00DD9EEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C0D1902C1B542C00DD9EEF /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F002536D2C20DAC500600559 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		F002536F2C20DB2500600559 /* IndizienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndizienVC.swift; sourceTree = "<group>"; };
+		F00253712C20DCE800600559 /* IndizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndizTableViewCell.swift; sourceTree = "<group>"; };
 		F0C0D1892C1B542C00DD9EEF /* CrimeBeaconHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeBeaconHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C0D18C2C1B542C00DD9EEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0C0D18E2C1B542C00DD9EEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		F0C0D18B2C1B542C00DD9EEF /* CrimeBeaconHunt */ = {
 			isa = PBXGroup;
 			children = (
+				F002536D2C20DAC500600559 /* Checkbox.swift */,
 				F0C0D1A02C1B64D900DD9EEF /* AkteVC.swift */,
 				F0C0D18C2C1B542C00DD9EEF /* AppDelegate.swift */,
 				F0C0D18E2C1B542C00DD9EEF /* SceneDelegate.swift */,
@@ -72,6 +79,8 @@
 				F0C0D19A2C1B542E00DD9EEF /* Info.plist */,
 				F0C0D1A22C1B79DA00DD9EEF /* CollectionTableViewCell.swift */,
 				F0C0D1A62C1B871900DD9EEF /* TileCollectionViewCell.swift */,
+				F002536F2C20DB2500600559 /* IndizienVC.swift */,
+				F00253712C20DCE800600559 /* IndizTableViewCell.swift */,
 			);
 			path = CrimeBeaconHunt;
 			sourceTree = "<group>";
@@ -147,12 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002536E2C20DAC500600559 /* Checkbox.swift in Sources */,
 				F0C0D1A32C1B79DA00DD9EEF /* CollectionTableViewCell.swift in Sources */,
 				F0C0D1912C1B542C00DD9EEF /* ViewController.swift in Sources */,
 				F0C0D1A12C1B64D900DD9EEF /* AkteVC.swift in Sources */,
 				F0C0D18D2C1B542C00DD9EEF /* AppDelegate.swift in Sources */,
 				F0C0D18F2C1B542C00DD9EEF /* SceneDelegate.swift in Sources */,
+				F00253702C20DB2500600559 /* IndizienVC.swift in Sources */,
 				F0C0D1A72C1B871900DD9EEF /* TileCollectionViewCell.swift in Sources */,
+				F00253722C20DCE800600559 /* IndizTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

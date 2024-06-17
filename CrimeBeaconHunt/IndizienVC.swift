@@ -9,6 +9,13 @@ import UIKit
 
 class IndizienVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // decide what will hapen if a row has been selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        checkArray[indexPath.row] = !checkArray[indexPath.row]
+        print(checkArray)
+        tableViewInd.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return indizArray.count
     }
@@ -22,18 +29,25 @@ class IndizienVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // Prepare the data
         let indizText = indizArray[indexPath.row]
+        let checkImage = checkArray[indexPath.row]
         
         // Configure the cell
         cell.indizText?.text = indizText
-        
+        if checkImage {
+            cell.checkImage?.image = UIImage(systemName: "checkmark.square")! as UIImage
+        }
+        else {
+            cell.checkImage?.image = UIImage(systemName: "squareshape")! as UIImage
+        }
         return cell
     }
     
+    @IBOutlet weak var checkImage: UIImageView!
     
     @IBOutlet weak var tableViewInd: UITableView!
     
     // these arrays are hardcoded
-    //let checkArray = [false, false, false]
+    var checkArray = [false, false, false]
     let indizArray = ["Indiz 1", "Indiz 2", "Indiz 3"]
     
     override func viewDidLoad() {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F002536E2C20DAC500600559 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002536D2C20DAC500600559 /* Checkbox.swift */; };
 		F00253702C20DB2500600559 /* IndizienVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002536F2C20DB2500600559 /* IndizienVC.swift */; };
 		F00253722C20DCE800600559 /* IndizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00253712C20DCE800600559 /* IndizTableViewCell.swift */; };
 		F0C0D18D2C1B542C00DD9EEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C0D18C2C1B542C00DD9EEF /* AppDelegate.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F002536D2C20DAC500600559 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		F002536F2C20DB2500600559 /* IndizienVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndizienVC.swift; sourceTree = "<group>"; };
 		F00253712C20DCE800600559 /* IndizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndizTableViewCell.swift; sourceTree = "<group>"; };
 		F0C0D1892C1B542C00DD9EEF /* CrimeBeaconHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeBeaconHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +66,6 @@
 		F0C0D18B2C1B542C00DD9EEF /* CrimeBeaconHunt */ = {
 			isa = PBXGroup;
 			children = (
-				F002536D2C20DAC500600559 /* Checkbox.swift */,
 				F0C0D1A02C1B64D900DD9EEF /* AkteVC.swift */,
 				F0C0D18C2C1B542C00DD9EEF /* AppDelegate.swift */,
 				F0C0D18E2C1B542C00DD9EEF /* SceneDelegate.swift */,
@@ -156,7 +153,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F002536E2C20DAC500600559 /* Checkbox.swift in Sources */,
 				F0C0D1A32C1B79DA00DD9EEF /* CollectionTableViewCell.swift in Sources */,
 				F0C0D1912C1B542C00DD9EEF /* ViewController.swift in Sources */,
 				F0C0D1A12C1B64D900DD9EEF /* AkteVC.swift in Sources */,

@@ -13,7 +13,8 @@ class IndizTableViewCell: UITableViewCell {
     
     @IBOutlet weak var indizText: UILabel!
     
-
+    @IBOutlet weak var checkImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -17,7 +17,9 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return table
     }()
     
-    private let viewModels: [CollectionTableViewCellViewModel] = [
+    private var viewModels: [CollectionTableViewCellViewModel] = []
+    
+    private let viewModelsSuspects: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(
             viewModels:[
                 TileCollectionViewCellViewModel(name: "Mr. Blue", backgroundColor: .systemBlue),
@@ -28,6 +30,28 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             ]
         )
     ]
+    private let viewModelsPlaces: [CollectionTableViewCellViewModel] = [
+        CollectionTableViewCellViewModel(
+            viewModels:[
+                TileCollectionViewCellViewModel(name: "Ort Blue", backgroundColor: .systemBlue),
+                TileCollectionViewCellViewModel(name: "Ort Pink", backgroundColor: .systemPink),
+                TileCollectionViewCellViewModel(name: "Ort Yellow", backgroundColor: .systemYellow),
+                TileCollectionViewCellViewModel(name: "Ort Green", backgroundColor: .systemGreen),
+                TileCollectionViewCellViewModel(name: "Ort Gray", backgroundColor: .systemGray),
+            ]
+        )
+    ]
+    private let viewModelsWeapons: [CollectionTableViewCellViewModel] = [
+        CollectionTableViewCellViewModel(
+            viewModels:[
+                TileCollectionViewCellViewModel(name: "Waffe Blue", backgroundColor: .systemBlue),
+                TileCollectionViewCellViewModel(name: "Waffe Pink", backgroundColor: .systemPink),
+                TileCollectionViewCellViewModel(name: "Waffe Yellow", backgroundColor: .systemYellow),
+                TileCollectionViewCellViewModel(name: "Waffe Green", backgroundColor: .systemGreen),
+                TileCollectionViewCellViewModel(name: "Waffe Gray", backgroundColor: .systemGray),
+            ]
+        )
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +59,7 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Do any additional setup after loading the view.
         
         // To-Do: Start: Selected Segment = Verdächtige
+        viewModels = viewModelsSuspects
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
@@ -78,10 +103,16 @@ class AkteVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func changeSC(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            viewModels = viewModelsSuspects
+            tableView.reloadData()
             print("Verdächtige")
         case 1:
+            viewModels = viewModelsWeapons
+            tableView.reloadData()
             print("Tatwaffe")
         case 2:
+            viewModels = viewModelsPlaces
+            tableView.reloadData()
             print("Tatort")
         default:
             print("Nothing new")
